@@ -1,0 +1,30 @@
+{
+  "name": "webpack-react",
+  "version": "0.0.0",
+  "description": "Play with webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artyomtrityak/webpack-react.git"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "javascript"
+  ],
+  "author": "Artyom Trityak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artyomtrityak/webpack-react/issues"
+  },
+  "homepage": "https://github.com/artyomtrityak/webpack-react",
+  "dependencies": {
+    "css-loader": "^0.9.1",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.7.3"
+  }
+}
