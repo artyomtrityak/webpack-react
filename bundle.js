@@ -84,7 +84,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
-	exports.push([module.id, "body {\n  background-color: #396;\n}", ""]);
+	exports.push([module.id, "body {\n  background-color: #376;\n}", ""]);
 
 /***/ },
 /* 4 */

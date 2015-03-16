@@ -4,7 +4,7 @@
   "description": "Play with webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack",
+    "start": "node webpack-server.js && webpack-dev-server --progress --colors",
     "test": ""
   },
   "repository": {
@@ -24,7 +24,11 @@
   "homepage": "https://github.com/artyomtrityak/webpack-react",
   "dependencies": {
     "css-loader": "^0.9.1",
+    "jsx-loader": "^0.12.2",
+    "react": "^0.13.0",
+    "react-hot-loader": "^1.2.3",
     "style-loader": "^0.8.3",
-    "webpack": "^1.7.3"
+    "webpack": "^1.7.3",
+    "webpack-dev-server": "^1.7.0"
   }
 }
