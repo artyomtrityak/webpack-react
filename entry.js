@@ -1,7 +1,17 @@
-var React = require('react');
+class SkinnedMesh {
+  constructor(geometry, materials) {
+    super(geometry, materials);
 
-var res = require('./content.js');
-
-require("./style.css");
-
-var rr = require('./re')
+    this.idMatrix = SkinnedMesh.defaultMatrix();
+    this.bones = [];
+    this.boneMatrices = [];
+    //...
+  }
+  update(camera) {
+    //...
+    super.update();
+  }
+  static defaultMatrix() {
+    return new THREE.Matrix4();
+  }
+}
