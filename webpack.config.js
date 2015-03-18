@@ -1,4 +1,5 @@
-var webpack = require('webpack');
+var webpack = require('webpack'),
+    path = require('path');
 
 module.exports = {
     entry: [
@@ -7,8 +8,9 @@ module.exports = {
         "./entry.js"
     ],
     output: {
-        path: __dirname,
-        filename: "bundle.js"
+        path: path.join(__dirname, '/build'),
+        filename: "bundle.js",
+        publicPath: 'http://localhost:8899/assets/build/',
     },
     resolve: {
         extensions: ['', '.js', '.jsx', '.json'],
@@ -22,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.jsx?$/,
-                loaders: ['react-hot', 'jsx?harmony'],
+                loaders: ['react-hot', 'jsx'],
                 exclude: /node_modules|bower_components/
             }
         ]
@@ -33,5 +35,7 @@ module.exports = {
         ),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
-    ]
+    ],
+    devtool: 'source-map' // source maps with debugging, slow
+    //devtool: 'eval-source-map'
 };

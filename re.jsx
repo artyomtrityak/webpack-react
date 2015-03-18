@@ -1,10 +1,10 @@
 var React = require('react');
 
-console.log('react!', React);
+console.log('HEL!', React);
 
  var Mod = React.createClass({
   render: function() {
-    return (<div>1233333233</div>);
+    return (<div>LOO</div>);
   }
 });
 
