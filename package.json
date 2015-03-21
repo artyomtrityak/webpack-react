@@ -4,7 +4,7 @@
   "description": "Play with webpack",
   "main": "index.js",
   "scripts": {
-    "start": "node webpack-server.js && webpack-dev-server -d --progress --colors",
+    "start": "webpack-dev-server -d --progress --colors",
     "test": ""
   },
   "repository": {

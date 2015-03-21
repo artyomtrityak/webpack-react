@@ -2,11 +2,13 @@ var webpack = require('webpack'),
     path = require('path');
 
 module.exports = {
-    entry: [
-        'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
-        'webpack/hot/only-dev-server',
-        "./entry.js"
-    ],
+    entry: {
+        app: [
+            //'webpack-dev-server/client?http://0.0.0.0:8080', // livereload
+            './entry.js',
+        ],
+        vendor: ['react', 'jquery'],
+    },
     output: {
         path: path.join(__dirname, '/build'),
         filename: "bundle.js",
@@ -19,12 +21,8 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                loader: "style!css"
-            },
-            {
                 test: /\.jsx?$/,
-                loaders: ['react-hot', 'babel'],
+                loaders: ['babel'],
                 exclude: /node_modules|bower_components/
             }
         ]
@@ -34,7 +32,10 @@ module.exports = {
             new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
         ),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin(
+            /* chunkName= */"vendor", /* filename= */"vendor.bundle.js"
+        )
     ],
     devtool: 'source-map' // source maps with debugging, slow
     //devtool: 'eval-source-map'

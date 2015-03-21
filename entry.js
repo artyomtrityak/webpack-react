@@ -1,10 +1,8 @@
 var React = require('react');
 
-var res = require('./content.js');
+var result = require('./content.js');
 
-require("./style.css");
-
-var rr = require('./re');
+require('./react-test');
 
 class SkinnedMesh {
   constructor(geometry, materials) {

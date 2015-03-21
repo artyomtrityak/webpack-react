@@ -1,6 +1,6 @@
 var React = require('react');
 
-console.log('HEL!', React);
+console.log('HEL222!', React);
 
  var Mod = React.createClass({
   render: function() {
